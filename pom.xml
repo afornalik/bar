@@ -6,7 +6,12 @@
 
     <groupId>pl.afornalik.example</groupId>
     <artifactId>bar</artifactId>
+    <packaging>pom</packaging>
     <version>0.1</version>
+    <modules>
+        <module>server</module>
+        <module>client</module>
+    </modules>
 
     <properties>
         <!--basic configuration-->
@@ -33,5 +38,15 @@
                 <checkstyle.maven.version>3.1.1</checkstyle.maven.version>
                 <spotbugs.maven.version>4.0.0</spotbugs.maven.version>
                 <spotbugs.version>4.0.2</spotbugs.version>-->
+        <protobuf-java.version>3.13.0</protobuf-java.version>
     </properties>
+
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/com.google.protobuf/protobuf-java -->
+        <dependency>
+            <groupId>com.google.protobuf</groupId>
+            <artifactId>protobuf-java</artifactId>
+            <version>${protobuf-java.version}</version>
+        </dependency>
+    </dependencies>
 </project>
