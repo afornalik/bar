@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>pl.afornalik.example</groupId>
+    <artifactId>bar</artifactId>
+    <version>0.1</version>
+
+    <properties>
+        <!--basic configuration-->
+        <project.java.version>11</project.java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+        <!--maven configuration-->
+        <version.maven>3.6.3</version.maven>
+        <maven.compiler.release>${project.java.version}</maven.compiler.release>
+        <maven.compiler.encoding>${project.build.sourceEncoding}</maven.compiler.encoding>
+        <maven.resources.encoding>${project.build.sourceEncoding}</maven.resources.encoding>
+
+        <!--        &lt;!&ndash;versions&ndash;&gt;
+                <jackson.core.version>2.10.3</jackson.core.version>
+                <testng.version>7.1.0</testng.version>
+                <rest-assured.version>4.1.1</rest-assured.version>
+                <hamcrest.version>2.1</hamcrest.version>
+                <maven-failsafe-plugin.version>2.22.2</maven-failsafe-plugin.version>
+                <jacoco.version>0.8.5</jacoco.version>
+                <projectlombok.version>1.18.12</projectlombok.version>
+                <swagger.version>2.9.2</swagger.version>
+                <pmd.maven.version>3.13.0</pmd.maven.version>
+                <checkstyle.maven.version>3.1.1</checkstyle.maven.version>
+                <spotbugs.maven.version>4.0.0</spotbugs.maven.version>
+                <spotbugs.version>4.0.2</spotbugs.version>-->
+    </properties>
+</project>
