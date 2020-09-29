@@ -4,44 +4,33 @@
 package pl.afornalik.bar.model;
 
 /**
- * Protobuf type {@code client}
+ * Protobuf type {@code pl.afornalik.bar.model.Client}
  */
-public final class client extends
+public  final class Client extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:client)
-    clientOrBuilder {
-private static final long serialVersionUID = 0L;
-  // Use client.newBuilder() to construct.
-  private client(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // @@protoc_insertion_point(message_implements:pl.afornalik.bar.model.Client)
+    ClientOrBuilder {
+  // Use Client.newBuilder() to construct.
+  private Client(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private client() {
+  private Client() {
+    id_ = 0;
     meals_ = java.util.Collections.emptyList();
-  }
-
-  @java.lang.Override
-  @SuppressWarnings({"unused"})
-  protected java.lang.Object newInstance(
-      UnusedPrivateParameter unused) {
-    return new client();
+    bill_ = 0F;
   }
 
   @java.lang.Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
-    return this.unknownFields;
+    return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
   }
-  private client(
+  private Client(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
     int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
       boolean done = false;
       while (!done) {
@@ -50,30 +39,29 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
+          default: {
+            if (!input.skipField(tag)) {
+              done = true;
+            }
+            break;
+          }
           case 8: {
 
             id_ = input.readInt32();
             break;
           }
           case 18: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              meals_ = new java.util.ArrayList<server.src.main.java.pl.afornalik.bar.model.meal>();
-              mutable_bitField0_ |= 0x00000001;
+            if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              meals_ = new java.util.ArrayList<pl.afornalik.bar.model.Meal>();
+              mutable_bitField0_ |= 0x00000002;
             }
             meals_.add(
-                input.readMessage(server.src.main.java.pl.afornalik.bar.model.meal.parser(), extensionRegistry));
+                input.readMessage(pl.afornalik.bar.model.Meal.parser(), extensionRegistry));
             break;
           }
           case 29: {
 
             bill_ = input.readFloat();
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
             break;
           }
         }
@@ -84,30 +72,28 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
+      if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
         meals_ = java.util.Collections.unmodifiableList(meals_);
       }
-      this.unknownFields = unknownFields.build();
       makeExtensionsImmutable();
     }
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return server.src.main.java.pl.afornalik.bar.model.Bar.internal_static_client_descriptor;
+    return pl.afornalik.bar.model.Bar.internal_static_pl_afornalik_bar_model_Client_descriptor;
   }
 
-  @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return server.src.main.java.pl.afornalik.bar.model.Bar.internal_static_client_fieldAccessorTable
+    return pl.afornalik.bar.model.Bar.internal_static_pl_afornalik_bar_model_Client_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            server.src.main.java.pl.afornalik.bar.model.client.class, server.src.main.java.pl.afornalik.bar.model.client.Builder.class);
+            pl.afornalik.bar.model.Client.class, pl.afornalik.bar.model.Client.Builder.class);
   }
 
   /**
-   * Protobuf enum {@code client.satisfaction}
+   * Protobuf enum {@code pl.afornalik.bar.model.Client.Satisfaction}
    */
-  public enum satisfaction
+  public enum Satisfaction
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
      * <code>POOR = 0;</code>
@@ -155,20 +141,14 @@ private static final long serialVersionUID = 0L;
     }
 
     /**
-     * @param value The numeric wire value of the corresponding enum entry.
-     * @return The enum associated with the given numeric wire value.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
-    public static satisfaction valueOf(int value) {
+    public static Satisfaction valueOf(int value) {
       return forNumber(value);
     }
 
-    /**
-     * @param value The numeric wire value of the corresponding enum entry.
-     * @return The enum associated with the given numeric wire value.
-     */
-    public static satisfaction forNumber(int value) {
+    public static Satisfaction forNumber(int value) {
       switch (value) {
         case 0: return POOR;
         case 1: return AVERAGE;
@@ -178,24 +158,20 @@ private static final long serialVersionUID = 0L;
       }
     }
 
-    public static com.google.protobuf.Internal.EnumLiteMap<satisfaction>
+    public static com.google.protobuf.Internal.EnumLiteMap<Satisfaction>
         internalGetValueMap() {
       return internalValueMap;
     }
     private static final com.google.protobuf.Internal.EnumLiteMap<
-        satisfaction> internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<satisfaction>() {
-            public satisfaction findValueByNumber(int number) {
-              return satisfaction.forNumber(number);
+        Satisfaction> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<Satisfaction>() {
+            public Satisfaction findValueByNumber(int number) {
+              return Satisfaction.forNumber(number);
             }
           };
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
-      if (this == UNRECOGNIZED) {
-        throw new java.lang.IllegalStateException(
-            "Can't get the descriptor of an unrecognized enum value.");
-      }
       return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -204,12 +180,12 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return server.src.main.java.pl.afornalik.bar.model.client.getDescriptor().getEnumTypes().get(0);
+      return pl.afornalik.bar.model.Client.getDescriptor().getEnumTypes().get(0);
     }
 
-    private static final satisfaction[] VALUES = values();
+    private static final Satisfaction[] VALUES = values();
 
-    public static satisfaction valueOf(
+    public static Satisfaction valueOf(
         com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
         throw new java.lang.IllegalArgumentException(
@@ -223,60 +199,54 @@ private static final long serialVersionUID = 0L;
 
     private final int value;
 
-    private satisfaction(int value) {
+    private Satisfaction(int value) {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:client.satisfaction)
+    // @@protoc_insertion_point(enum_scope:pl.afornalik.bar.model.Client.Satisfaction)
   }
 
+  private int bitField0_;
   public static final int ID_FIELD_NUMBER = 1;
   private int id_;
   /**
-   * <code>int32 id = 1;</code>
-   * @return The id.
+   * <code>optional int32 id = 1;</code>
    */
-  @java.lang.Override
   public int getId() {
     return id_;
   }
 
   public static final int MEALS_FIELD_NUMBER = 2;
-  private java.util.List<server.src.main.java.pl.afornalik.bar.model.meal> meals_;
+  private java.util.List<pl.afornalik.bar.model.Meal> meals_;
   /**
-   * <code>repeated .meal meals = 2;</code>
+   * <code>repeated .pl.afornalik.bar.model.Meal meals = 2;</code>
    */
-  @java.lang.Override
-  public java.util.List<server.src.main.java.pl.afornalik.bar.model.meal> getMealsList() {
+  public java.util.List<pl.afornalik.bar.model.Meal> getMealsList() {
     return meals_;
   }
   /**
-   * <code>repeated .meal meals = 2;</code>
+   * <code>repeated .pl.afornalik.bar.model.Meal meals = 2;</code>
    */
-  @java.lang.Override
-  public java.util.List<? extends server.src.main.java.pl.afornalik.bar.model.mealOrBuilder> 
+  public java.util.List<? extends pl.afornalik.bar.model.MealOrBuilder> 
       getMealsOrBuilderList() {
     return meals_;
   }
   /**
-   * <code>repeated .meal meals = 2;</code>
+   * <code>repeated .pl.afornalik.bar.model.Meal meals = 2;</code>
    */
-  @java.lang.Override
   public int getMealsCount() {
     return meals_.size();
   }
   /**
-   * <code>repeated .meal meals = 2;</code>
+   * <code>repeated .pl.afornalik.bar.model.Meal meals = 2;</code>
    */
-  @java.lang.Override
-  public server.src.main.java.pl.afornalik.bar.model.meal getMeals(int index) {
+  public pl.afornalik.bar.model.Meal getMeals(int index) {
     return meals_.get(index);
   }
   /**
-   * <code>repeated .meal meals = 2;</code>
+   * <code>repeated .pl.afornalik.bar.model.Meal meals = 2;</code>
    */
-  @java.lang.Override
-  public server.src.main.java.pl.afornalik.bar.model.mealOrBuilder getMealsOrBuilder(
+  public pl.afornalik.bar.model.MealOrBuilder getMealsOrBuilder(
       int index) {
     return meals_.get(index);
   }
@@ -284,16 +254,13 @@ private static final long serialVersionUID = 0L;
   public static final int BILL_FIELD_NUMBER = 3;
   private float bill_;
   /**
-   * <code>float bill = 3;</code>
-   * @return The bill.
+   * <code>optional float bill = 3;</code>
    */
-  @java.lang.Override
   public float getBill() {
     return bill_;
   }
 
   private byte memoizedIsInitialized = -1;
-  @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
     if (isInitialized == 1) return true;
@@ -303,7 +270,6 @@ private static final long serialVersionUID = 0L;
     return true;
   }
 
-  @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     if (id_ != 0) {
@@ -315,10 +281,8 @@ private static final long serialVersionUID = 0L;
     if (bill_ != 0F) {
       output.writeFloat(3, bill_);
     }
-    unknownFields.writeTo(output);
   }
 
-  @java.lang.Override
   public int getSerializedSize() {
     int size = memoizedSize;
     if (size != -1) return size;
@@ -336,30 +300,31 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(3, bill_);
     }
-    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
 
+  private static final long serialVersionUID = 0L;
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof server.src.main.java.pl.afornalik.bar.model.client)) {
+    if (!(obj instanceof pl.afornalik.bar.model.Client)) {
       return super.equals(obj);
     }
-    server.src.main.java.pl.afornalik.bar.model.client other = (server.src.main.java.pl.afornalik.bar.model.client) obj;
+    pl.afornalik.bar.model.Client other = (pl.afornalik.bar.model.Client) obj;
 
-    if (getId()
-        != other.getId()) return false;
-    if (!getMealsList()
-        .equals(other.getMealsList())) return false;
-    if (java.lang.Float.floatToIntBits(getBill())
-        != java.lang.Float.floatToIntBits(
-            other.getBill())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
-    return true;
+    boolean result = true;
+    result = result && (getId()
+        == other.getId());
+    result = result && getMealsList()
+        .equals(other.getMealsList());
+    result = result && (
+        java.lang.Float.floatToIntBits(getBill())
+        == java.lang.Float.floatToIntBits(
+            other.getBill()));
+    return result;
   }
 
   @java.lang.Override
@@ -368,7 +333,7 @@ private static final long serialVersionUID = 0L;
       return memoizedHashCode;
     }
     int hash = 41;
-    hash = (19 * hash) + getDescriptor().hashCode();
+    hash = (19 * hash) + getDescriptorForType().hashCode();
     hash = (37 * hash) + ID_FIELD_NUMBER;
     hash = (53 * hash) + getId();
     if (getMealsCount() > 0) {
@@ -383,69 +348,58 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static server.src.main.java.pl.afornalik.bar.model.client parseFrom(
-      java.nio.ByteBuffer data)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    return PARSER.parseFrom(data);
-  }
-  public static server.src.main.java.pl.afornalik.bar.model.client parseFrom(
-      java.nio.ByteBuffer data,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    return PARSER.parseFrom(data, extensionRegistry);
-  }
-  public static server.src.main.java.pl.afornalik.bar.model.client parseFrom(
+  public static pl.afornalik.bar.model.Client parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static server.src.main.java.pl.afornalik.bar.model.client parseFrom(
+  public static pl.afornalik.bar.model.Client parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static server.src.main.java.pl.afornalik.bar.model.client parseFrom(byte[] data)
+  public static pl.afornalik.bar.model.Client parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static server.src.main.java.pl.afornalik.bar.model.client parseFrom(
+  public static pl.afornalik.bar.model.Client parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static server.src.main.java.pl.afornalik.bar.model.client parseFrom(java.io.InputStream input)
+  public static pl.afornalik.bar.model.Client parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static server.src.main.java.pl.afornalik.bar.model.client parseFrom(
+  public static pl.afornalik.bar.model.Client parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-  public static server.src.main.java.pl.afornalik.bar.model.client parseDelimitedFrom(java.io.InputStream input)
+  public static pl.afornalik.bar.model.Client parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-  public static server.src.main.java.pl.afornalik.bar.model.client parseDelimitedFrom(
+  public static pl.afornalik.bar.model.Client parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static server.src.main.java.pl.afornalik.bar.model.client parseFrom(
+  public static pl.afornalik.bar.model.Client parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static server.src.main.java.pl.afornalik.bar.model.client parseFrom(
+  public static pl.afornalik.bar.model.Client parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -453,15 +407,13 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  @java.lang.Override
   public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(server.src.main.java.pl.afornalik.bar.model.client prototype) {
+  public static Builder newBuilder(pl.afornalik.bar.model.Client prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-  @java.lang.Override
   public Builder toBuilder() {
     return this == DEFAULT_INSTANCE
         ? new Builder() : new Builder().mergeFrom(this);
@@ -474,26 +426,25 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code client}
+   * Protobuf type {@code pl.afornalik.bar.model.Client}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:client)
-      server.src.main.java.pl.afornalik.bar.model.clientOrBuilder {
+      // @@protoc_insertion_point(builder_implements:pl.afornalik.bar.model.Client)
+      pl.afornalik.bar.model.ClientOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return server.src.main.java.pl.afornalik.bar.model.Bar.internal_static_client_descriptor;
+      return pl.afornalik.bar.model.Bar.internal_static_pl_afornalik_bar_model_Client_descriptor;
     }
 
-    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return server.src.main.java.pl.afornalik.bar.model.Bar.internal_static_client_fieldAccessorTable
+      return pl.afornalik.bar.model.Bar.internal_static_pl_afornalik_bar_model_Client_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              server.src.main.java.pl.afornalik.bar.model.client.class, server.src.main.java.pl.afornalik.bar.model.client.Builder.class);
+              pl.afornalik.bar.model.Client.class, pl.afornalik.bar.model.Client.Builder.class);
     }
 
-    // Construct using server.src.main.java.pl.afornalik.bar.model.client.newBuilder()
+    // Construct using pl.afornalik.bar.model.Client.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -509,14 +460,13 @@ private static final long serialVersionUID = 0L;
         getMealsFieldBuilder();
       }
     }
-    @java.lang.Override
     public Builder clear() {
       super.clear();
       id_ = 0;
 
       if (mealsBuilder_ == null) {
         meals_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
       } else {
         mealsBuilder_.clear();
       }
@@ -525,89 +475,80 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return server.src.main.java.pl.afornalik.bar.model.Bar.internal_static_client_descriptor;
+      return pl.afornalik.bar.model.Bar.internal_static_pl_afornalik_bar_model_Client_descriptor;
     }
 
-    @java.lang.Override
-    public server.src.main.java.pl.afornalik.bar.model.client getDefaultInstanceForType() {
-      return server.src.main.java.pl.afornalik.bar.model.client.getDefaultInstance();
+    public pl.afornalik.bar.model.Client getDefaultInstanceForType() {
+      return pl.afornalik.bar.model.Client.getDefaultInstance();
     }
 
-    @java.lang.Override
-    public server.src.main.java.pl.afornalik.bar.model.client build() {
-      server.src.main.java.pl.afornalik.bar.model.client result = buildPartial();
+    public pl.afornalik.bar.model.Client build() {
+      pl.afornalik.bar.model.Client result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
       return result;
     }
 
-    @java.lang.Override
-    public server.src.main.java.pl.afornalik.bar.model.client buildPartial() {
-      server.src.main.java.pl.afornalik.bar.model.client result = new server.src.main.java.pl.afornalik.bar.model.client(this);
+    public pl.afornalik.bar.model.Client buildPartial() {
+      pl.afornalik.bar.model.Client result = new pl.afornalik.bar.model.Client(this);
       int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
       result.id_ = id_;
       if (mealsBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
           meals_ = java.util.Collections.unmodifiableList(meals_);
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.meals_ = meals_;
       } else {
         result.meals_ = mealsBuilder_.build();
       }
       result.bill_ = bill_;
+      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
 
-    @java.lang.Override
     public Builder clone() {
-      return super.clone();
+      return (Builder) super.clone();
     }
-    @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
-      return super.setField(field, value);
+        Object value) {
+      return (Builder) super.setField(field, value);
     }
-    @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return super.clearField(field);
+      return (Builder) super.clearField(field);
     }
-    @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return super.clearOneof(oneof);
+      return (Builder) super.clearOneof(oneof);
     }
-    @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
-        int index, java.lang.Object value) {
-      return super.setRepeatedField(field, index, value);
+        int index, Object value) {
+      return (Builder) super.setRepeatedField(field, index, value);
     }
-    @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
-      return super.addRepeatedField(field, value);
+        Object value) {
+      return (Builder) super.addRepeatedField(field, value);
     }
-    @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof server.src.main.java.pl.afornalik.bar.model.client) {
-        return mergeFrom((server.src.main.java.pl.afornalik.bar.model.client)other);
+      if (other instanceof pl.afornalik.bar.model.Client) {
+        return mergeFrom((pl.afornalik.bar.model.Client)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(server.src.main.java.pl.afornalik.bar.model.client other) {
-      if (other == server.src.main.java.pl.afornalik.bar.model.client.getDefaultInstance()) return this;
+    public Builder mergeFrom(pl.afornalik.bar.model.Client other) {
+      if (other == pl.afornalik.bar.model.Client.getDefaultInstance()) return this;
       if (other.getId() != 0) {
         setId(other.getId());
       }
@@ -615,7 +556,7 @@ private static final long serialVersionUID = 0L;
         if (!other.meals_.isEmpty()) {
           if (meals_.isEmpty()) {
             meals_ = other.meals_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureMealsIsMutable();
             meals_.addAll(other.meals_);
@@ -628,7 +569,7 @@ private static final long serialVersionUID = 0L;
             mealsBuilder_.dispose();
             mealsBuilder_ = null;
             meals_ = other.meals_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
             mealsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getMealsFieldBuilder() : null;
@@ -640,26 +581,23 @@ private static final long serialVersionUID = 0L;
       if (other.getBill() != 0F) {
         setBill(other.getBill());
       }
-      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
 
-    @java.lang.Override
     public final boolean isInitialized() {
       return true;
     }
 
-    @java.lang.Override
     public Builder mergeFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      server.src.main.java.pl.afornalik.bar.model.client parsedMessage = null;
+      pl.afornalik.bar.model.Client parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (server.src.main.java.pl.afornalik.bar.model.client) e.getUnfinishedMessage();
+        parsedMessage = (pl.afornalik.bar.model.Client) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
         if (parsedMessage != null) {
@@ -672,17 +610,13 @@ private static final long serialVersionUID = 0L;
 
     private int id_ ;
     /**
-     * <code>int32 id = 1;</code>
-     * @return The id.
+     * <code>optional int32 id = 1;</code>
      */
-    @java.lang.Override
     public int getId() {
       return id_;
     }
     /**
-     * <code>int32 id = 1;</code>
-     * @param value The id to set.
-     * @return This builder for chaining.
+     * <code>optional int32 id = 1;</code>
      */
     public Builder setId(int value) {
       
@@ -691,8 +625,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>int32 id = 1;</code>
-     * @return This builder for chaining.
+     * <code>optional int32 id = 1;</code>
      */
     public Builder clearId() {
       
@@ -701,22 +634,22 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.util.List<server.src.main.java.pl.afornalik.bar.model.meal> meals_ =
+    private java.util.List<pl.afornalik.bar.model.Meal> meals_ =
       java.util.Collections.emptyList();
     private void ensureMealsIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
-        meals_ = new java.util.ArrayList<server.src.main.java.pl.afornalik.bar.model.meal>(meals_);
-        bitField0_ |= 0x00000001;
+      if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        meals_ = new java.util.ArrayList<pl.afornalik.bar.model.Meal>(meals_);
+        bitField0_ |= 0x00000002;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        server.src.main.java.pl.afornalik.bar.model.meal, server.src.main.java.pl.afornalik.bar.model.meal.Builder, server.src.main.java.pl.afornalik.bar.model.mealOrBuilder> mealsBuilder_;
+        pl.afornalik.bar.model.Meal, pl.afornalik.bar.model.Meal.Builder, pl.afornalik.bar.model.MealOrBuilder> mealsBuilder_;
 
     /**
-     * <code>repeated .meal meals = 2;</code>
+     * <code>repeated .pl.afornalik.bar.model.Meal meals = 2;</code>
      */
-    public java.util.List<server.src.main.java.pl.afornalik.bar.model.meal> getMealsList() {
+    public java.util.List<pl.afornalik.bar.model.Meal> getMealsList() {
       if (mealsBuilder_ == null) {
         return java.util.Collections.unmodifiableList(meals_);
       } else {
@@ -724,7 +657,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .meal meals = 2;</code>
+     * <code>repeated .pl.afornalik.bar.model.Meal meals = 2;</code>
      */
     public int getMealsCount() {
       if (mealsBuilder_ == null) {
@@ -734,9 +667,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .meal meals = 2;</code>
+     * <code>repeated .pl.afornalik.bar.model.Meal meals = 2;</code>
      */
-    public server.src.main.java.pl.afornalik.bar.model.meal getMeals(int index) {
+    public pl.afornalik.bar.model.Meal getMeals(int index) {
       if (mealsBuilder_ == null) {
         return meals_.get(index);
       } else {
@@ -744,10 +677,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .meal meals = 2;</code>
+     * <code>repeated .pl.afornalik.bar.model.Meal meals = 2;</code>
      */
     public Builder setMeals(
-        int index, server.src.main.java.pl.afornalik.bar.model.meal value) {
+        int index, pl.afornalik.bar.model.Meal value) {
       if (mealsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -761,10 +694,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .meal meals = 2;</code>
+     * <code>repeated .pl.afornalik.bar.model.Meal meals = 2;</code>
      */
     public Builder setMeals(
-        int index, server.src.main.java.pl.afornalik.bar.model.meal.Builder builderForValue) {
+        int index, pl.afornalik.bar.model.Meal.Builder builderForValue) {
       if (mealsBuilder_ == null) {
         ensureMealsIsMutable();
         meals_.set(index, builderForValue.build());
@@ -775,9 +708,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .meal meals = 2;</code>
+     * <code>repeated .pl.afornalik.bar.model.Meal meals = 2;</code>
      */
-    public Builder addMeals(server.src.main.java.pl.afornalik.bar.model.meal value) {
+    public Builder addMeals(pl.afornalik.bar.model.Meal value) {
       if (mealsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -791,10 +724,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .meal meals = 2;</code>
+     * <code>repeated .pl.afornalik.bar.model.Meal meals = 2;</code>
      */
     public Builder addMeals(
-        int index, server.src.main.java.pl.afornalik.bar.model.meal value) {
+        int index, pl.afornalik.bar.model.Meal value) {
       if (mealsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -808,10 +741,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .meal meals = 2;</code>
+     * <code>repeated .pl.afornalik.bar.model.Meal meals = 2;</code>
      */
     public Builder addMeals(
-        server.src.main.java.pl.afornalik.bar.model.meal.Builder builderForValue) {
+        pl.afornalik.bar.model.Meal.Builder builderForValue) {
       if (mealsBuilder_ == null) {
         ensureMealsIsMutable();
         meals_.add(builderForValue.build());
@@ -822,10 +755,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .meal meals = 2;</code>
+     * <code>repeated .pl.afornalik.bar.model.Meal meals = 2;</code>
      */
     public Builder addMeals(
-        int index, server.src.main.java.pl.afornalik.bar.model.meal.Builder builderForValue) {
+        int index, pl.afornalik.bar.model.Meal.Builder builderForValue) {
       if (mealsBuilder_ == null) {
         ensureMealsIsMutable();
         meals_.add(index, builderForValue.build());
@@ -836,10 +769,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .meal meals = 2;</code>
+     * <code>repeated .pl.afornalik.bar.model.Meal meals = 2;</code>
      */
     public Builder addAllMeals(
-        java.lang.Iterable<? extends server.src.main.java.pl.afornalik.bar.model.meal> values) {
+        java.lang.Iterable<? extends pl.afornalik.bar.model.Meal> values) {
       if (mealsBuilder_ == null) {
         ensureMealsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -851,12 +784,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .meal meals = 2;</code>
+     * <code>repeated .pl.afornalik.bar.model.Meal meals = 2;</code>
      */
     public Builder clearMeals() {
       if (mealsBuilder_ == null) {
         meals_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
       } else {
         mealsBuilder_.clear();
@@ -864,7 +797,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .meal meals = 2;</code>
+     * <code>repeated .pl.afornalik.bar.model.Meal meals = 2;</code>
      */
     public Builder removeMeals(int index) {
       if (mealsBuilder_ == null) {
@@ -877,16 +810,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .meal meals = 2;</code>
+     * <code>repeated .pl.afornalik.bar.model.Meal meals = 2;</code>
      */
-    public server.src.main.java.pl.afornalik.bar.model.meal.Builder getMealsBuilder(
+    public pl.afornalik.bar.model.Meal.Builder getMealsBuilder(
         int index) {
       return getMealsFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .meal meals = 2;</code>
+     * <code>repeated .pl.afornalik.bar.model.Meal meals = 2;</code>
      */
-    public server.src.main.java.pl.afornalik.bar.model.mealOrBuilder getMealsOrBuilder(
+    public pl.afornalik.bar.model.MealOrBuilder getMealsOrBuilder(
         int index) {
       if (mealsBuilder_ == null) {
         return meals_.get(index);  } else {
@@ -894,9 +827,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .meal meals = 2;</code>
+     * <code>repeated .pl.afornalik.bar.model.Meal meals = 2;</code>
      */
-    public java.util.List<? extends server.src.main.java.pl.afornalik.bar.model.mealOrBuilder> 
+    public java.util.List<? extends pl.afornalik.bar.model.MealOrBuilder> 
          getMealsOrBuilderList() {
       if (mealsBuilder_ != null) {
         return mealsBuilder_.getMessageOrBuilderList();
@@ -905,35 +838,35 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .meal meals = 2;</code>
+     * <code>repeated .pl.afornalik.bar.model.Meal meals = 2;</code>
      */
-    public server.src.main.java.pl.afornalik.bar.model.meal.Builder addMealsBuilder() {
+    public pl.afornalik.bar.model.Meal.Builder addMealsBuilder() {
       return getMealsFieldBuilder().addBuilder(
-          server.src.main.java.pl.afornalik.bar.model.meal.getDefaultInstance());
+          pl.afornalik.bar.model.Meal.getDefaultInstance());
     }
     /**
-     * <code>repeated .meal meals = 2;</code>
+     * <code>repeated .pl.afornalik.bar.model.Meal meals = 2;</code>
      */
-    public server.src.main.java.pl.afornalik.bar.model.meal.Builder addMealsBuilder(
+    public pl.afornalik.bar.model.Meal.Builder addMealsBuilder(
         int index) {
       return getMealsFieldBuilder().addBuilder(
-          index, server.src.main.java.pl.afornalik.bar.model.meal.getDefaultInstance());
+          index, pl.afornalik.bar.model.Meal.getDefaultInstance());
     }
     /**
-     * <code>repeated .meal meals = 2;</code>
+     * <code>repeated .pl.afornalik.bar.model.Meal meals = 2;</code>
      */
-    public java.util.List<server.src.main.java.pl.afornalik.bar.model.meal.Builder> 
+    public java.util.List<pl.afornalik.bar.model.Meal.Builder> 
          getMealsBuilderList() {
       return getMealsFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        server.src.main.java.pl.afornalik.bar.model.meal, server.src.main.java.pl.afornalik.bar.model.meal.Builder, server.src.main.java.pl.afornalik.bar.model.mealOrBuilder> 
+        pl.afornalik.bar.model.Meal, pl.afornalik.bar.model.Meal.Builder, pl.afornalik.bar.model.MealOrBuilder> 
         getMealsFieldBuilder() {
       if (mealsBuilder_ == null) {
         mealsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            server.src.main.java.pl.afornalik.bar.model.meal, server.src.main.java.pl.afornalik.bar.model.meal.Builder, server.src.main.java.pl.afornalik.bar.model.mealOrBuilder>(
+            pl.afornalik.bar.model.Meal, pl.afornalik.bar.model.Meal.Builder, pl.afornalik.bar.model.MealOrBuilder>(
                 meals_,
-                ((bitField0_ & 0x00000001) != 0),
+                ((bitField0_ & 0x00000002) == 0x00000002),
                 getParentForChildren(),
                 isClean());
         meals_ = null;
@@ -943,17 +876,13 @@ private static final long serialVersionUID = 0L;
 
     private float bill_ ;
     /**
-     * <code>float bill = 3;</code>
-     * @return The bill.
+     * <code>optional float bill = 3;</code>
      */
-    @java.lang.Override
     public float getBill() {
       return bill_;
     }
     /**
-     * <code>float bill = 3;</code>
-     * @param value The bill to set.
-     * @return This builder for chaining.
+     * <code>optional float bill = 3;</code>
      */
     public Builder setBill(float value) {
       
@@ -962,8 +891,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>float bill = 3;</code>
-     * @return This builder for chaining.
+     * <code>optional float bill = 3;</code>
      */
     public Builder clearBill() {
       
@@ -971,54 +899,50 @@ private static final long serialVersionUID = 0L;
       onChanged();
       return this;
     }
-    @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFields(unknownFields);
+      return this;
     }
 
-    @java.lang.Override
     public final Builder mergeUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.mergeUnknownFields(unknownFields);
+      return this;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:client)
+    // @@protoc_insertion_point(builder_scope:pl.afornalik.bar.model.Client)
   }
 
-  // @@protoc_insertion_point(class_scope:client)
-  private static final server.src.main.java.pl.afornalik.bar.model.client DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:pl.afornalik.bar.model.Client)
+  private static final pl.afornalik.bar.model.Client DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new server.src.main.java.pl.afornalik.bar.model.client();
+    DEFAULT_INSTANCE = new pl.afornalik.bar.model.Client();
   }
 
-  public static server.src.main.java.pl.afornalik.bar.model.client getDefaultInstance() {
+  public static pl.afornalik.bar.model.Client getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<client>
-      PARSER = new com.google.protobuf.AbstractParser<client>() {
-    @java.lang.Override
-    public client parsePartialFrom(
+  private static final com.google.protobuf.Parser<Client>
+      PARSER = new com.google.protobuf.AbstractParser<Client>() {
+    public Client parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new client(input, extensionRegistry);
+        return new Client(input, extensionRegistry);
     }
   };
 
-  public static com.google.protobuf.Parser<client> parser() {
+  public static com.google.protobuf.Parser<Client> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<client> getParserForType() {
+  public com.google.protobuf.Parser<Client> getParserForType() {
     return PARSER;
   }
 
-  @java.lang.Override
-  public server.src.main.java.pl.afornalik.bar.model.client getDefaultInstanceForType() {
+  public pl.afornalik.bar.model.Client getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

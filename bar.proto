@@ -1,17 +1,19 @@
 syntax = "proto3";
 
-option java_package = "server.src.main.java.pl.afornalik.bar.model" ;
+package pl.afornalik.bar.model;
+
+option java_package = "pl.afornalik.bar.model" ;
 option java_multiple_files = true;
 //option java_outer_classname = "Meal";
 
-message meal {
+message Meal {
   int32 id = 1;
   string name = 2;
   float price = 3;
   int32 prepare_time = 4 ;
   bool deliverable = 5;
 
-  enum type {
+  enum Type {
     BREAKFAST = 0;
     DINNER = 1;
     DESSERT = 2;
@@ -19,12 +21,12 @@ message meal {
   }
 }
 
-message client {
+message Client {
   int32 id = 1;
-  repeated meal meals = 2;
+  repeated Meal meals = 2;
   float bill = 3;
 
-  enum satisfaction{
+  enum Satisfaction{
     POOR = 0;
     AVERAGE = 1;
     GOOD = 2;
@@ -32,8 +34,8 @@ message client {
   }
 }
 
-message waiter {
+message Waiter {
   int32 id = 1;
   string name = 2;
-  repeated client clients = 3;
+  repeated Client clients = 3;
 }
