@@ -3,7 +3,7 @@ syntax = "proto3";
 package pl.afornalik.bar.model;
 
 option java_package = "pl.afornalik.bar.model" ;
-option java_multiple_files = true;
+option java_multiple_files = false;
 //option java_outer_classname = "Meal";
 
 message Meal {
@@ -19,6 +19,11 @@ message Meal {
     DESSERT = 2;
     SUPPER = 3;
   }
+}
+
+message Menu {
+  int32 id = 1;
+  repeated Meal meals = 2;
 }
 
 message Client {

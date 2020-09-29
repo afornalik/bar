@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface MealProvider<T extends Meal> {
 
-    List<Meal> provide();
+    List<T> provide();
 }
