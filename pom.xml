@@ -25,22 +25,12 @@
         <maven.compiler.encoding>${project.build.sourceEncoding}</maven.compiler.encoding>
         <maven.resources.encoding>${project.build.sourceEncoding}</maven.resources.encoding>
 
-        <!--        &lt;!&ndash;versions&ndash;&gt;
-                <jackson.core.version>2.10.3</jackson.core.version>
-                <testng.version>7.1.0</testng.version>
-                <rest-assured.version>4.1.1</rest-assured.version>
-                <hamcrest.version>2.1</hamcrest.version>
-                <maven-failsafe-plugin.version>2.22.2</maven-failsafe-plugin.version>
-                <jacoco.version>0.8.5</jacoco.version>
-                <projectlombok.version>1.18.12</projectlombok.version>
-                <swagger.version>2.9.2</swagger.version>
-                <pmd.maven.version>3.13.0</pmd.maven.version>
-                <checkstyle.maven.version>3.1.1</checkstyle.maven.version>
-                <spotbugs.maven.version>4.0.0</spotbugs.maven.version>
-                <spotbugs.version>4.0.2</spotbugs.version>-->
+        <!--dependencies version-->
         <protobuf-java.version>3.13.0</protobuf-java.version>
         <guava.version>29.0-jre</guava.version>
         <guice.version>4.2.3</guice.version>
+        <junit.version>4.13</junit.version>
+        <mockito-core.version>3.5.13</mockito-core.version>
     </properties>
 
     <dependencies>
@@ -58,6 +48,18 @@
             <groupId>com.google.inject</groupId>
             <artifactId>guice</artifactId>
             <version>${guice.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>${mockito-core.version}</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 </project>
