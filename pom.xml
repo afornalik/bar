@@ -6,7 +6,12 @@
 
     <groupId>pl.afornalik.example</groupId>
     <artifactId>bar</artifactId>
+    <packaging>pom</packaging>
     <version>0.1</version>
+    <modules>
+        <module>server</module>
+        <module>client</module>
+    </modules>
 
     <properties>
         <!--basic configuration-->
@@ -33,5 +38,26 @@
                 <checkstyle.maven.version>3.1.1</checkstyle.maven.version>
                 <spotbugs.maven.version>4.0.0</spotbugs.maven.version>
                 <spotbugs.version>4.0.2</spotbugs.version>-->
+        <protobuf-java.version>3.13.0</protobuf-java.version>
+        <guava.version>29.0-jre</guava.version>
+        <guice.version>4.2.3</guice.version>
     </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.google.protobuf</groupId>
+            <artifactId>protobuf-java</artifactId>
+            <version>${protobuf-java.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>${guava.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.inject</groupId>
+            <artifactId>guice</artifactId>
+            <version>${guice.version}</version>
+        </dependency>
+    </dependencies>
 </project>
