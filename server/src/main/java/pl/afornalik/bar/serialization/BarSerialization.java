@@ -1,8 +1,8 @@
 package pl.afornalik.bar.serialization;
 
 import pl.afornalik.bar.model.Meal;
-import pl.afornalik.bar.service.BreakfastMenu;
-import pl.afornalik.bar.service.Menu;
+import pl.afornalik.bar.service.BreakfastAvailableMenu;
+import pl.afornalik.bar.service.AvailableMenu;
 import pl.afornalik.bar.service.TemporaryMealProvider;
 
 import java.io.FileOutputStream;
@@ -14,29 +14,21 @@ import java.util.stream.Collectors;
 public class BarSerialization {
 
     private final OutputStream outputStream;
-    private Menu<Meal> menu = new BreakfastMenu(new TemporaryMealProvider());
 
     public BarSerialization(OutputStream outputStream) {
         this.outputStream = outputStream;
     }
 
-    public <T extends Meal> void sendMenuToFile(Menu<T> menu) {
-        try  {
-            writeMealsToFile((FileOutputStream)outputStream);
+    public void sendMenuToFile(AvailableMenu availableMenu) {
+        try {
+            outputStream.write(availableMenu.showMenu().toByteArray());
         } catch (IOException e) {
             e.printStackTrace();
+        } finally {
+            try {
+                outputStream.close();
+            } catch (IOException ignored) {
+            }
         }
-    }
-
-    private void writeMealsToFile(FileOutputStream fileOutputStream) throws IOException {
-        for (byte[] meal : convertMealsToByteArrays()) {
-            fileOutputStream.write(meal);
-        }
-    }
-
-    private List<byte[]> convertMealsToByteArrays() {
-        return menu.showMenu().stream()
-                .map(Meal::toByteArray)
-                .collect(Collectors.toList());
     }
 }

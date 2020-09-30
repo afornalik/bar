@@ -4,11 +4,11 @@
 package pl.afornalik.bar.model;
 
 /**
- * Protobuf type {@code pl.afornalik.bar.model.Waiter}
+ * Protobuf type {@code Waiter}
  */
 public  final class Waiter extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:pl.afornalik.bar.model.Waiter)
+    // @@protoc_insertion_point(message_implements:Waiter)
     WaiterOrBuilder {
   // Use Waiter.newBuilder() to construct.
   private Waiter(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
@@ -81,12 +81,12 @@ public  final class Waiter extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return pl.afornalik.bar.model.Bar.internal_static_pl_afornalik_bar_model_Waiter_descriptor;
+    return pl.afornalik.bar.model.Bar.internal_static_Waiter_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return pl.afornalik.bar.model.Bar.internal_static_pl_afornalik_bar_model_Waiter_fieldAccessorTable
+    return pl.afornalik.bar.model.Bar.internal_static_Waiter_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             pl.afornalik.bar.model.Waiter.class, pl.afornalik.bar.model.Waiter.Builder.class);
   }
@@ -138,32 +138,32 @@ public  final class Waiter extends
   public static final int CLIENTS_FIELD_NUMBER = 3;
   private java.util.List<pl.afornalik.bar.model.Client> clients_;
   /**
-   * <code>repeated .pl.afornalik.bar.model.Client clients = 3;</code>
+   * <code>repeated .Client clients = 3;</code>
    */
   public java.util.List<pl.afornalik.bar.model.Client> getClientsList() {
     return clients_;
   }
   /**
-   * <code>repeated .pl.afornalik.bar.model.Client clients = 3;</code>
+   * <code>repeated .Client clients = 3;</code>
    */
   public java.util.List<? extends pl.afornalik.bar.model.ClientOrBuilder> 
       getClientsOrBuilderList() {
     return clients_;
   }
   /**
-   * <code>repeated .pl.afornalik.bar.model.Client clients = 3;</code>
+   * <code>repeated .Client clients = 3;</code>
    */
   public int getClientsCount() {
     return clients_.size();
   }
   /**
-   * <code>repeated .pl.afornalik.bar.model.Client clients = 3;</code>
+   * <code>repeated .Client clients = 3;</code>
    */
   public pl.afornalik.bar.model.Client getClients(int index) {
     return clients_.get(index);
   }
   /**
-   * <code>repeated .pl.afornalik.bar.model.Client clients = 3;</code>
+   * <code>repeated .Client clients = 3;</code>
    */
   public pl.afornalik.bar.model.ClientOrBuilder getClientsOrBuilder(
       int index) {
@@ -332,20 +332,20 @@ public  final class Waiter extends
     return builder;
   }
   /**
-   * Protobuf type {@code pl.afornalik.bar.model.Waiter}
+   * Protobuf type {@code Waiter}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:pl.afornalik.bar.model.Waiter)
+      // @@protoc_insertion_point(builder_implements:Waiter)
       pl.afornalik.bar.model.WaiterOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return pl.afornalik.bar.model.Bar.internal_static_pl_afornalik_bar_model_Waiter_descriptor;
+      return pl.afornalik.bar.model.Bar.internal_static_Waiter_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return pl.afornalik.bar.model.Bar.internal_static_pl_afornalik_bar_model_Waiter_fieldAccessorTable
+      return pl.afornalik.bar.model.Bar.internal_static_Waiter_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               pl.afornalik.bar.model.Waiter.class, pl.afornalik.bar.model.Waiter.Builder.class);
     }
@@ -383,7 +383,7 @@ public  final class Waiter extends
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return pl.afornalik.bar.model.Bar.internal_static_pl_afornalik_bar_model_Waiter_descriptor;
+      return pl.afornalik.bar.model.Bar.internal_static_Waiter_descriptor;
     }
 
     public pl.afornalik.bar.model.Waiter getDefaultInstanceForType() {
@@ -623,7 +623,7 @@ public  final class Waiter extends
         pl.afornalik.bar.model.Client, pl.afornalik.bar.model.Client.Builder, pl.afornalik.bar.model.ClientOrBuilder> clientsBuilder_;
 
     /**
-     * <code>repeated .pl.afornalik.bar.model.Client clients = 3;</code>
+     * <code>repeated .Client clients = 3;</code>
      */
     public java.util.List<pl.afornalik.bar.model.Client> getClientsList() {
       if (clientsBuilder_ == null) {
@@ -633,7 +633,7 @@ public  final class Waiter extends
       }
     }
     /**
-     * <code>repeated .pl.afornalik.bar.model.Client clients = 3;</code>
+     * <code>repeated .Client clients = 3;</code>
      */
     public int getClientsCount() {
       if (clientsBuilder_ == null) {
@@ -643,7 +643,7 @@ public  final class Waiter extends
       }
     }
     /**
-     * <code>repeated .pl.afornalik.bar.model.Client clients = 3;</code>
+     * <code>repeated .Client clients = 3;</code>
      */
     public pl.afornalik.bar.model.Client getClients(int index) {
       if (clientsBuilder_ == null) {
@@ -653,7 +653,7 @@ public  final class Waiter extends
       }
     }
     /**
-     * <code>repeated .pl.afornalik.bar.model.Client clients = 3;</code>
+     * <code>repeated .Client clients = 3;</code>
      */
     public Builder setClients(
         int index, pl.afornalik.bar.model.Client value) {
@@ -670,7 +670,7 @@ public  final class Waiter extends
       return this;
     }
     /**
-     * <code>repeated .pl.afornalik.bar.model.Client clients = 3;</code>
+     * <code>repeated .Client clients = 3;</code>
      */
     public Builder setClients(
         int index, pl.afornalik.bar.model.Client.Builder builderForValue) {
@@ -684,7 +684,7 @@ public  final class Waiter extends
       return this;
     }
     /**
-     * <code>repeated .pl.afornalik.bar.model.Client clients = 3;</code>
+     * <code>repeated .Client clients = 3;</code>
      */
     public Builder addClients(pl.afornalik.bar.model.Client value) {
       if (clientsBuilder_ == null) {
@@ -700,7 +700,7 @@ public  final class Waiter extends
       return this;
     }
     /**
-     * <code>repeated .pl.afornalik.bar.model.Client clients = 3;</code>
+     * <code>repeated .Client clients = 3;</code>
      */
     public Builder addClients(
         int index, pl.afornalik.bar.model.Client value) {
@@ -717,7 +717,7 @@ public  final class Waiter extends
       return this;
     }
     /**
-     * <code>repeated .pl.afornalik.bar.model.Client clients = 3;</code>
+     * <code>repeated .Client clients = 3;</code>
      */
     public Builder addClients(
         pl.afornalik.bar.model.Client.Builder builderForValue) {
@@ -731,7 +731,7 @@ public  final class Waiter extends
       return this;
     }
     /**
-     * <code>repeated .pl.afornalik.bar.model.Client clients = 3;</code>
+     * <code>repeated .Client clients = 3;</code>
      */
     public Builder addClients(
         int index, pl.afornalik.bar.model.Client.Builder builderForValue) {
@@ -745,7 +745,7 @@ public  final class Waiter extends
       return this;
     }
     /**
-     * <code>repeated .pl.afornalik.bar.model.Client clients = 3;</code>
+     * <code>repeated .Client clients = 3;</code>
      */
     public Builder addAllClients(
         java.lang.Iterable<? extends pl.afornalik.bar.model.Client> values) {
@@ -760,7 +760,7 @@ public  final class Waiter extends
       return this;
     }
     /**
-     * <code>repeated .pl.afornalik.bar.model.Client clients = 3;</code>
+     * <code>repeated .Client clients = 3;</code>
      */
     public Builder clearClients() {
       if (clientsBuilder_ == null) {
@@ -773,7 +773,7 @@ public  final class Waiter extends
       return this;
     }
     /**
-     * <code>repeated .pl.afornalik.bar.model.Client clients = 3;</code>
+     * <code>repeated .Client clients = 3;</code>
      */
     public Builder removeClients(int index) {
       if (clientsBuilder_ == null) {
@@ -786,14 +786,14 @@ public  final class Waiter extends
       return this;
     }
     /**
-     * <code>repeated .pl.afornalik.bar.model.Client clients = 3;</code>
+     * <code>repeated .Client clients = 3;</code>
      */
     public pl.afornalik.bar.model.Client.Builder getClientsBuilder(
         int index) {
       return getClientsFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .pl.afornalik.bar.model.Client clients = 3;</code>
+     * <code>repeated .Client clients = 3;</code>
      */
     public pl.afornalik.bar.model.ClientOrBuilder getClientsOrBuilder(
         int index) {
@@ -803,7 +803,7 @@ public  final class Waiter extends
       }
     }
     /**
-     * <code>repeated .pl.afornalik.bar.model.Client clients = 3;</code>
+     * <code>repeated .Client clients = 3;</code>
      */
     public java.util.List<? extends pl.afornalik.bar.model.ClientOrBuilder> 
          getClientsOrBuilderList() {
@@ -814,14 +814,14 @@ public  final class Waiter extends
       }
     }
     /**
-     * <code>repeated .pl.afornalik.bar.model.Client clients = 3;</code>
+     * <code>repeated .Client clients = 3;</code>
      */
     public pl.afornalik.bar.model.Client.Builder addClientsBuilder() {
       return getClientsFieldBuilder().addBuilder(
           pl.afornalik.bar.model.Client.getDefaultInstance());
     }
     /**
-     * <code>repeated .pl.afornalik.bar.model.Client clients = 3;</code>
+     * <code>repeated .Client clients = 3;</code>
      */
     public pl.afornalik.bar.model.Client.Builder addClientsBuilder(
         int index) {
@@ -829,7 +829,7 @@ public  final class Waiter extends
           index, pl.afornalik.bar.model.Client.getDefaultInstance());
     }
     /**
-     * <code>repeated .pl.afornalik.bar.model.Client clients = 3;</code>
+     * <code>repeated .Client clients = 3;</code>
      */
     public java.util.List<pl.afornalik.bar.model.Client.Builder> 
          getClientsBuilderList() {
@@ -860,10 +860,10 @@ public  final class Waiter extends
     }
 
 
-    // @@protoc_insertion_point(builder_scope:pl.afornalik.bar.model.Waiter)
+    // @@protoc_insertion_point(builder_scope:Waiter)
   }
 
-  // @@protoc_insertion_point(class_scope:pl.afornalik.bar.model.Waiter)
+  // @@protoc_insertion_point(class_scope:Waiter)
   private static final pl.afornalik.bar.model.Waiter DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new pl.afornalik.bar.model.Waiter();

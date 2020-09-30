@@ -1,6 +1,8 @@
 package pl.afornalik.bar.service;
 
-public interface Order<T> {
+import pl.afornalik.bar.model.Meal;
 
-    T orderMeal(int id);
+public interface Order<T extends Meal> {
+
+    boolean orderMeal(int id);
 }

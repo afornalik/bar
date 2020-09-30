@@ -4,7 +4,7 @@
 package pl.afornalik.bar.model;
 
 public interface ClientOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:pl.afornalik.bar.model.Client)
+    // @@protoc_insertion_point(interface_extends:Client)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -13,25 +13,25 @@ public interface ClientOrBuilder extends
   int getId();
 
   /**
-   * <code>repeated .pl.afornalik.bar.model.Meal meals = 2;</code>
+   * <code>repeated .Meal meals = 2;</code>
    */
   java.util.List<pl.afornalik.bar.model.Meal> 
       getMealsList();
   /**
-   * <code>repeated .pl.afornalik.bar.model.Meal meals = 2;</code>
+   * <code>repeated .Meal meals = 2;</code>
    */
   pl.afornalik.bar.model.Meal getMeals(int index);
   /**
-   * <code>repeated .pl.afornalik.bar.model.Meal meals = 2;</code>
+   * <code>repeated .Meal meals = 2;</code>
    */
   int getMealsCount();
   /**
-   * <code>repeated .pl.afornalik.bar.model.Meal meals = 2;</code>
+   * <code>repeated .Meal meals = 2;</code>
    */
   java.util.List<? extends pl.afornalik.bar.model.MealOrBuilder> 
       getMealsOrBuilderList();
   /**
-   * <code>repeated .pl.afornalik.bar.model.Meal meals = 2;</code>
+   * <code>repeated .Meal meals = 2;</code>
    */
   pl.afornalik.bar.model.MealOrBuilder getMealsOrBuilder(
       int index);

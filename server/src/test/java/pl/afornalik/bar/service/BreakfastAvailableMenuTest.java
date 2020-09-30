@@ -5,10 +5,11 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.mockito.Mockito;
 import pl.afornalik.bar.model.Meal;
+import pl.afornalik.bar.model.Menu;
 
 import java.util.List;
 
-public class BreakfastMenuTest {
+public class BreakfastAvailableMenuTest {
 
     public static int INITIAL_NUMBERS_OF_MEALS = 2;
 
@@ -18,35 +19,35 @@ public class BreakfastMenuTest {
     public void shouldBeSomeFourValueInitiallyInTheMenu() {
         //given
         Mockito.when(mealProvider.provide()).thenReturn(this.provideDummyMeals());
-        BreakfastMenu breakfastMenu = new BreakfastMenu(mealProvider);
+        BreakfastAvailableMenu breakfastMenu = new BreakfastAvailableMenu(mealProvider);
         //when
-        List<Meal> result = breakfastMenu.showMenu();
+        Menu result = breakfastMenu.showMenu();
         //then
         Assert.assertNotNull(result);
-        Assert.assertFalse(result.isEmpty());
-        Assert.assertEquals(result.size(), INITIAL_NUMBERS_OF_MEALS);
+       // Assert.assertFalse(result.getMealsList().isEmpty());
+        Assert.assertEquals(result.getMealsCount(), INITIAL_NUMBERS_OF_MEALS);
     }
 
     @Test
     public void shouldEachMealHaveIdSetup() {
         //given
         Mockito.when(mealProvider.provide()).thenReturn(this.provideDummyMeals());
-        BreakfastMenu breakfastMenu = new BreakfastMenu(mealProvider);
+        BreakfastAvailableMenu breakfastMenu = new BreakfastAvailableMenu(mealProvider);
         //when
-        List<Meal> result = breakfastMenu.showMenu();
+        Menu result = breakfastMenu.showMenu();
         //then
-        Assert.assertFalse(result.stream().anyMatch(meal -> meal.getId() == 0));
+        Assert.assertFalse(result.getMealsList().stream().anyMatch(meal -> meal.getId() == 0));
     }
 
     @Test
     public void shouldEachMealHaveNameSetup() {
         //given
         Mockito.when(mealProvider.provide()).thenReturn(this.provideDummyMeals());
-        BreakfastMenu breakfastMenu = new BreakfastMenu(mealProvider);
+        BreakfastAvailableMenu breakfastMenu = new BreakfastAvailableMenu(mealProvider);
         //when
-        List<Meal> result = breakfastMenu.showMenu();
+        Menu result = breakfastMenu.showMenu();
         //then
-        Assert.assertFalse(result.stream().anyMatch(meal -> meal.getName() == null || meal.getName().equals("")));
+        Assert.assertFalse(result.getMealsList().stream().anyMatch(meal -> meal.getName() == null || meal.getName().equals("")));
     }
 
     private List<Meal> provideDummyMeals() {

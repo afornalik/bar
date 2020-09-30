@@ -4,7 +4,7 @@
 package pl.afornalik.bar.model;
 
 public interface MealOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:pl.afornalik.bar.model.Meal)
+    // @@protoc_insertion_point(interface_extends:Meal)
     com.google.protobuf.MessageOrBuilder {
 
   /**

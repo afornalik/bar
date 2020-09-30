@@ -4,7 +4,7 @@
 package pl.afornalik.bar.model;
 
 public interface WaiterOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:pl.afornalik.bar.model.Waiter)
+    // @@protoc_insertion_point(interface_extends:Waiter)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -23,25 +23,25 @@ public interface WaiterOrBuilder extends
       getNameBytes();
 
   /**
-   * <code>repeated .pl.afornalik.bar.model.Client clients = 3;</code>
+   * <code>repeated .Client clients = 3;</code>
    */
   java.util.List<pl.afornalik.bar.model.Client> 
       getClientsList();
   /**
-   * <code>repeated .pl.afornalik.bar.model.Client clients = 3;</code>
+   * <code>repeated .Client clients = 3;</code>
    */
   pl.afornalik.bar.model.Client getClients(int index);
   /**
-   * <code>repeated .pl.afornalik.bar.model.Client clients = 3;</code>
+   * <code>repeated .Client clients = 3;</code>
    */
   int getClientsCount();
   /**
-   * <code>repeated .pl.afornalik.bar.model.Client clients = 3;</code>
+   * <code>repeated .Client clients = 3;</code>
    */
   java.util.List<? extends pl.afornalik.bar.model.ClientOrBuilder> 
       getClientsOrBuilderList();
   /**
-   * <code>repeated .pl.afornalik.bar.model.Client clients = 3;</code>
+   * <code>repeated .Client clients = 3;</code>
    */
   pl.afornalik.bar.model.ClientOrBuilder getClientsOrBuilder(
       int index);

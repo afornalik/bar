@@ -3,8 +3,8 @@
 
 package pl.afornalik.bar.model;
 
-public interface ClientOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:Client)
+public interface MenuOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:Menu)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -35,9 +35,4 @@ public interface ClientOrBuilder extends
    */
   pl.afornalik.bar.model.MealOrBuilder getMealsOrBuilder(
       int index);
-
-  /**
-   * <code>optional float bill = 3;</code>
-   */
-  float getBill();
 }
