@@ -4,11 +4,11 @@
 package pl.afornalik.bar.model;
 
 /**
- * Protobuf type {@code pl.afornalik.bar.model.Client}
+ * Protobuf type {@code Client}
  */
 public  final class Client extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:pl.afornalik.bar.model.Client)
+    // @@protoc_insertion_point(message_implements:Client)
     ClientOrBuilder {
   // Use Client.newBuilder() to construct.
   private Client(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
@@ -80,18 +80,18 @@ public  final class Client extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return pl.afornalik.bar.model.Bar.internal_static_pl_afornalik_bar_model_Client_descriptor;
+    return pl.afornalik.bar.model.Bar.internal_static_Client_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return pl.afornalik.bar.model.Bar.internal_static_pl_afornalik_bar_model_Client_fieldAccessorTable
+    return pl.afornalik.bar.model.Bar.internal_static_Client_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             pl.afornalik.bar.model.Client.class, pl.afornalik.bar.model.Client.Builder.class);
   }
 
   /**
-   * Protobuf enum {@code pl.afornalik.bar.model.Client.Satisfaction}
+   * Protobuf enum {@code Client.Satisfaction}
    */
   public enum Satisfaction
       implements com.google.protobuf.ProtocolMessageEnum {
@@ -203,7 +203,7 @@ public  final class Client extends
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:pl.afornalik.bar.model.Client.Satisfaction)
+    // @@protoc_insertion_point(enum_scope:Client.Satisfaction)
   }
 
   private int bitField0_;
@@ -219,32 +219,32 @@ public  final class Client extends
   public static final int MEALS_FIELD_NUMBER = 2;
   private java.util.List<pl.afornalik.bar.model.Meal> meals_;
   /**
-   * <code>repeated .pl.afornalik.bar.model.Meal meals = 2;</code>
+   * <code>repeated .Meal meals = 2;</code>
    */
   public java.util.List<pl.afornalik.bar.model.Meal> getMealsList() {
     return meals_;
   }
   /**
-   * <code>repeated .pl.afornalik.bar.model.Meal meals = 2;</code>
+   * <code>repeated .Meal meals = 2;</code>
    */
   public java.util.List<? extends pl.afornalik.bar.model.MealOrBuilder> 
       getMealsOrBuilderList() {
     return meals_;
   }
   /**
-   * <code>repeated .pl.afornalik.bar.model.Meal meals = 2;</code>
+   * <code>repeated .Meal meals = 2;</code>
    */
   public int getMealsCount() {
     return meals_.size();
   }
   /**
-   * <code>repeated .pl.afornalik.bar.model.Meal meals = 2;</code>
+   * <code>repeated .Meal meals = 2;</code>
    */
   public pl.afornalik.bar.model.Meal getMeals(int index) {
     return meals_.get(index);
   }
   /**
-   * <code>repeated .pl.afornalik.bar.model.Meal meals = 2;</code>
+   * <code>repeated .Meal meals = 2;</code>
    */
   public pl.afornalik.bar.model.MealOrBuilder getMealsOrBuilder(
       int index) {
@@ -426,20 +426,20 @@ public  final class Client extends
     return builder;
   }
   /**
-   * Protobuf type {@code pl.afornalik.bar.model.Client}
+   * Protobuf type {@code Client}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:pl.afornalik.bar.model.Client)
+      // @@protoc_insertion_point(builder_implements:Client)
       pl.afornalik.bar.model.ClientOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return pl.afornalik.bar.model.Bar.internal_static_pl_afornalik_bar_model_Client_descriptor;
+      return pl.afornalik.bar.model.Bar.internal_static_Client_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return pl.afornalik.bar.model.Bar.internal_static_pl_afornalik_bar_model_Client_fieldAccessorTable
+      return pl.afornalik.bar.model.Bar.internal_static_Client_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               pl.afornalik.bar.model.Client.class, pl.afornalik.bar.model.Client.Builder.class);
     }
@@ -477,7 +477,7 @@ public  final class Client extends
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return pl.afornalik.bar.model.Bar.internal_static_pl_afornalik_bar_model_Client_descriptor;
+      return pl.afornalik.bar.model.Bar.internal_static_Client_descriptor;
     }
 
     public pl.afornalik.bar.model.Client getDefaultInstanceForType() {
@@ -647,7 +647,7 @@ public  final class Client extends
         pl.afornalik.bar.model.Meal, pl.afornalik.bar.model.Meal.Builder, pl.afornalik.bar.model.MealOrBuilder> mealsBuilder_;
 
     /**
-     * <code>repeated .pl.afornalik.bar.model.Meal meals = 2;</code>
+     * <code>repeated .Meal meals = 2;</code>
      */
     public java.util.List<pl.afornalik.bar.model.Meal> getMealsList() {
       if (mealsBuilder_ == null) {
@@ -657,7 +657,7 @@ public  final class Client extends
       }
     }
     /**
-     * <code>repeated .pl.afornalik.bar.model.Meal meals = 2;</code>
+     * <code>repeated .Meal meals = 2;</code>
      */
     public int getMealsCount() {
       if (mealsBuilder_ == null) {
@@ -667,7 +667,7 @@ public  final class Client extends
       }
     }
     /**
-     * <code>repeated .pl.afornalik.bar.model.Meal meals = 2;</code>
+     * <code>repeated .Meal meals = 2;</code>
      */
     public pl.afornalik.bar.model.Meal getMeals(int index) {
       if (mealsBuilder_ == null) {
@@ -677,7 +677,7 @@ public  final class Client extends
       }
     }
     /**
-     * <code>repeated .pl.afornalik.bar.model.Meal meals = 2;</code>
+     * <code>repeated .Meal meals = 2;</code>
      */
     public Builder setMeals(
         int index, pl.afornalik.bar.model.Meal value) {
@@ -694,7 +694,7 @@ public  final class Client extends
       return this;
     }
     /**
-     * <code>repeated .pl.afornalik.bar.model.Meal meals = 2;</code>
+     * <code>repeated .Meal meals = 2;</code>
      */
     public Builder setMeals(
         int index, pl.afornalik.bar.model.Meal.Builder builderForValue) {
@@ -708,7 +708,7 @@ public  final class Client extends
       return this;
     }
     /**
-     * <code>repeated .pl.afornalik.bar.model.Meal meals = 2;</code>
+     * <code>repeated .Meal meals = 2;</code>
      */
     public Builder addMeals(pl.afornalik.bar.model.Meal value) {
       if (mealsBuilder_ == null) {
@@ -724,7 +724,7 @@ public  final class Client extends
       return this;
     }
     /**
-     * <code>repeated .pl.afornalik.bar.model.Meal meals = 2;</code>
+     * <code>repeated .Meal meals = 2;</code>
      */
     public Builder addMeals(
         int index, pl.afornalik.bar.model.Meal value) {
@@ -741,7 +741,7 @@ public  final class Client extends
       return this;
     }
     /**
-     * <code>repeated .pl.afornalik.bar.model.Meal meals = 2;</code>
+     * <code>repeated .Meal meals = 2;</code>
      */
     public Builder addMeals(
         pl.afornalik.bar.model.Meal.Builder builderForValue) {
@@ -755,7 +755,7 @@ public  final class Client extends
       return this;
     }
     /**
-     * <code>repeated .pl.afornalik.bar.model.Meal meals = 2;</code>
+     * <code>repeated .Meal meals = 2;</code>
      */
     public Builder addMeals(
         int index, pl.afornalik.bar.model.Meal.Builder builderForValue) {
@@ -769,7 +769,7 @@ public  final class Client extends
       return this;
     }
     /**
-     * <code>repeated .pl.afornalik.bar.model.Meal meals = 2;</code>
+     * <code>repeated .Meal meals = 2;</code>
      */
     public Builder addAllMeals(
         java.lang.Iterable<? extends pl.afornalik.bar.model.Meal> values) {
@@ -784,7 +784,7 @@ public  final class Client extends
       return this;
     }
     /**
-     * <code>repeated .pl.afornalik.bar.model.Meal meals = 2;</code>
+     * <code>repeated .Meal meals = 2;</code>
      */
     public Builder clearMeals() {
       if (mealsBuilder_ == null) {
@@ -797,7 +797,7 @@ public  final class Client extends
       return this;
     }
     /**
-     * <code>repeated .pl.afornalik.bar.model.Meal meals = 2;</code>
+     * <code>repeated .Meal meals = 2;</code>
      */
     public Builder removeMeals(int index) {
       if (mealsBuilder_ == null) {
@@ -810,14 +810,14 @@ public  final class Client extends
       return this;
     }
     /**
-     * <code>repeated .pl.afornalik.bar.model.Meal meals = 2;</code>
+     * <code>repeated .Meal meals = 2;</code>
      */
     public pl.afornalik.bar.model.Meal.Builder getMealsBuilder(
         int index) {
       return getMealsFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .pl.afornalik.bar.model.Meal meals = 2;</code>
+     * <code>repeated .Meal meals = 2;</code>
      */
     public pl.afornalik.bar.model.MealOrBuilder getMealsOrBuilder(
         int index) {
@@ -827,7 +827,7 @@ public  final class Client extends
       }
     }
     /**
-     * <code>repeated .pl.afornalik.bar.model.Meal meals = 2;</code>
+     * <code>repeated .Meal meals = 2;</code>
      */
     public java.util.List<? extends pl.afornalik.bar.model.MealOrBuilder> 
          getMealsOrBuilderList() {
@@ -838,14 +838,14 @@ public  final class Client extends
       }
     }
     /**
-     * <code>repeated .pl.afornalik.bar.model.Meal meals = 2;</code>
+     * <code>repeated .Meal meals = 2;</code>
      */
     public pl.afornalik.bar.model.Meal.Builder addMealsBuilder() {
       return getMealsFieldBuilder().addBuilder(
           pl.afornalik.bar.model.Meal.getDefaultInstance());
     }
     /**
-     * <code>repeated .pl.afornalik.bar.model.Meal meals = 2;</code>
+     * <code>repeated .Meal meals = 2;</code>
      */
     public pl.afornalik.bar.model.Meal.Builder addMealsBuilder(
         int index) {
@@ -853,7 +853,7 @@ public  final class Client extends
           index, pl.afornalik.bar.model.Meal.getDefaultInstance());
     }
     /**
-     * <code>repeated .pl.afornalik.bar.model.Meal meals = 2;</code>
+     * <code>repeated .Meal meals = 2;</code>
      */
     public java.util.List<pl.afornalik.bar.model.Meal.Builder> 
          getMealsBuilderList() {
@@ -910,10 +910,10 @@ public  final class Client extends
     }
 
 
-    // @@protoc_insertion_point(builder_scope:pl.afornalik.bar.model.Client)
+    // @@protoc_insertion_point(builder_scope:Client)
   }
 
-  // @@protoc_insertion_point(class_scope:pl.afornalik.bar.model.Client)
+  // @@protoc_insertion_point(class_scope:Client)
   private static final pl.afornalik.bar.model.Client DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new pl.afornalik.bar.model.Client();
