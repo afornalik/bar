@@ -6,7 +6,7 @@ import pl.afornalik.bar.model.Meal;
 import pl.afornalik.bar.model.Menu;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.InputStream;
 
 public class AvailableMealsDeserializationTest {
@@ -15,45 +15,45 @@ public class AvailableMealsDeserializationTest {
     private InputStream fileInputStream;
 
     @Test
-    public void shouldDeserializeMenu() throws FileNotFoundException {
+    public void shouldDeserializeMenu() throws IOException {
         //given
         fileInputStream = new FileInputStream(FILE_NAME);
-        AvailableMealsDeserialization availableMealsDeserialization = new AvailableMealsDeserialization(fileInputStream);
+        AvailableMealsDeserialization availableMealsDeserialization = new AvailableMealsDeserialization();
         //when
-        Menu result = availableMealsDeserialization.deserialize();
+        Menu result = availableMealsDeserialization.deserialize(fileInputStream.readAllBytes());
         //then
         Assert.assertFalse(result.getMealsList().isEmpty());
     }
 
     @Test
-    public void shouldAllMealsBeInitialized() throws FileNotFoundException {
+    public void shouldAllMealsBeInitialized() throws IOException {
         //given
         fileInputStream = new FileInputStream(FILE_NAME);
-        AvailableMealsDeserialization availableMealsDeserialization = new AvailableMealsDeserialization(fileInputStream);
+        AvailableMealsDeserialization availableMealsDeserialization = new AvailableMealsDeserialization();
         //when
-        Menu result = availableMealsDeserialization.deserialize();
+        Menu result = availableMealsDeserialization.deserialize(fileInputStream.readAllBytes());
         //then
         Assert.assertTrue(result.getMealsList().stream().allMatch(Meal::isInitialized));
     }
 
     @Test
-    public void shouldAllMealsHaveIdSetup() throws FileNotFoundException {
+    public void shouldAllMealsHaveIdSetup() throws IOException {
         //given
         fileInputStream = new FileInputStream(FILE_NAME);
-        AvailableMealsDeserialization availableMealsDeserialization = new AvailableMealsDeserialization(fileInputStream);
+        AvailableMealsDeserialization availableMealsDeserialization = new AvailableMealsDeserialization();
         //when
-        Menu result = availableMealsDeserialization.deserialize();
+        Menu result = availableMealsDeserialization.deserialize(fileInputStream.readAllBytes());
         //then
         Assert.assertTrue(result.getMealsList().stream().allMatch(meal -> meal.getId() != 0));
     }
 
     @Test
-    public void shouldAllMealsHaveNameSetup() throws FileNotFoundException {
+    public void shouldAllMealsHaveNameSetup() throws IOException {
         //given
         fileInputStream = new FileInputStream(FILE_NAME);
-        AvailableMealsDeserialization availableMealsDeserialization = new AvailableMealsDeserialization(fileInputStream);
+        AvailableMealsDeserialization availableMealsDeserialization = new AvailableMealsDeserialization();
         //when
-        Menu result = availableMealsDeserialization.deserialize();
+        Menu result = availableMealsDeserialization.deserialize(fileInputStream.readAllBytes());
         //then
         Assert.assertTrue(result.getMealsList().stream().allMatch(meal -> meal.getName() != null && !meal.getName().equals("")));
     }

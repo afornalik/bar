@@ -8,7 +8,6 @@ import pl.afornalik.bar.model.Meal;
 
 import java.util.List;
 import java.util.Set;
-import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class TemporaryMealProviderTest {

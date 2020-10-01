@@ -1,20 +1,27 @@
 package pl.afornalik.bar;
 
+import pl.afornalik.bar.socket.IncomingMessage;
 import pl.afornalik.bar.socket.SocketServer;
 
 import java.io.IOException;
 
 public class SocketServerRunner {
 
-    private static SocketServer socketServer;
+    private SocketServer socketServer = new SocketServer();
+    private IncomingMessage message = new IncomingMessage(socketServer);
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
-        socketServer = new SocketServer();
-        try {
-            socketServer.start(54332);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        SocketServerRunner socketServerRunner = new SocketServerRunner();
+
+        socketServerRunner.socketServer.start(54332);
+        socketServerRunner.message.getClientMessage();
+     //   socketServerRunner.message.getClientMessage();
+       // socketServerRunner.message.getClientMessage();
+       // socketServerRunner.message.getClientMessage();
+       // socketServerRunner.message.getClientMessage();
+
+        socketServerRunner.socketServer.stop();
+
     }
 }

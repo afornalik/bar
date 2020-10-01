@@ -17,17 +17,25 @@ public class SocketServer {
     public void start(int port) throws IOException {
         serverSocket = new ServerSocket(port);
         clientSocket = serverSocket.accept();
-        out = new PrintWriter(clientSocket.getOutputStream(),true);
+        out = new PrintWriter(clientSocket.getOutputStream(), true);
         in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
-
-        String greeting = in.readLine();
-        if (greeting.equals("hello server")){
-            out.println("hello client");
-        } else {
-            out.println("unrecognised greeting");
-        }
     }
 
+    public void sendText(String msg) {
+        out.println(msg);
+    }
+
+    public void sendBytes(byte[] bytes) throws IOException {
+        clientSocket.getOutputStream().write(bytes);
+    }
+
+    public String readText() throws IOException {
+        return in.readLine();
+    }
+
+    public byte[] readByteArray() throws IOException {
+        return clientSocket.getInputStream().readAllBytes();
+    }
     public void stop() throws IOException {
         in.close();
         out.close();

@@ -3,11 +3,11 @@ package pl.afornalik.bar.service;
 import pl.afornalik.bar.model.Meal;
 import pl.afornalik.bar.model.Menu;
 
-public class BreakfastAvailableMenu implements AvailableMenu {
+public class BreakfastMenu implements AvailableMenu {
 
     private final Menu breakFastMenu;
 
-    public BreakfastAvailableMenu(MealProvider<Meal> mealProvider) {
+    public BreakfastMenu(MealProvider<Meal> mealProvider) {
         this.breakFastMenu = Menu.newBuilder().addAllMeals(mealProvider.provide()).build();
     }
 

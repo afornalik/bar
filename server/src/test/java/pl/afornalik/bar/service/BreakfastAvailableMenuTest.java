@@ -19,7 +19,7 @@ public class BreakfastAvailableMenuTest {
     public void shouldBeSomeFourValueInitiallyInTheMenu() {
         //given
         Mockito.when(mealProvider.provide()).thenReturn(this.provideDummyMeals());
-        BreakfastAvailableMenu breakfastMenu = new BreakfastAvailableMenu(mealProvider);
+        BreakfastMenu breakfastMenu = new BreakfastMenu(mealProvider);
         //when
         Menu result = breakfastMenu.showMenu();
         //then
@@ -32,7 +32,7 @@ public class BreakfastAvailableMenuTest {
     public void shouldEachMealHaveIdSetup() {
         //given
         Mockito.when(mealProvider.provide()).thenReturn(this.provideDummyMeals());
-        BreakfastAvailableMenu breakfastMenu = new BreakfastAvailableMenu(mealProvider);
+        BreakfastMenu breakfastMenu = new BreakfastMenu(mealProvider);
         //when
         Menu result = breakfastMenu.showMenu();
         //then
@@ -43,7 +43,7 @@ public class BreakfastAvailableMenuTest {
     public void shouldEachMealHaveNameSetup() {
         //given
         Mockito.when(mealProvider.provide()).thenReturn(this.provideDummyMeals());
-        BreakfastAvailableMenu breakfastMenu = new BreakfastAvailableMenu(mealProvider);
+        BreakfastMenu breakfastMenu = new BreakfastMenu(mealProvider);
         //when
         Menu result = breakfastMenu.showMenu();
         //then

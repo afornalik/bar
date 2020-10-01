@@ -3,7 +3,8 @@ package pl.afornalik.bar.serialization;
 import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.Test;
-import pl.afornalik.bar.service.BreakfastAvailableMenu;
+import pl.afornalik.bar.model.Menu;
+import pl.afornalik.bar.service.BreakfastMenu;
 import pl.afornalik.bar.service.AvailableMenu;
 import pl.afornalik.bar.service.TemporaryMealProvider;
 
@@ -17,17 +18,17 @@ import java.nio.file.Paths;
 public class MenuSerializationTest {
 
     private final static String FILE_NAME = "../menu.ser";
-    private AvailableMenu breakfastAvailableMenu;
+    private Menu breakfastAvailableMenu;
     private OutputStream outputStream;
 
     @Test
     public void shouldWriteMenuToFile() throws FileNotFoundException {
         //given
-        breakfastAvailableMenu = new BreakfastAvailableMenu(new TemporaryMealProvider());
+        breakfastAvailableMenu = new BreakfastMenu(new TemporaryMealProvider()).showMenu();
         outputStream = new FileOutputStream(FILE_NAME);
-        MenuSerialization menuSerialization = new MenuSerialization(outputStream);
+        MenuSerialization menuSerialization = new MenuSerialization();
         //when
-        menuSerialization.sendMenuToFile(breakfastAvailableMenu);
+        menuSerialization.serialize(breakfastAvailableMenu);
         //then
         Assert.assertTrue(Files.exists(Paths.get(FILE_NAME)));
     }
