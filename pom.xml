@@ -10,7 +10,8 @@
     <version>0.1</version>
     <modules>
         <module>server</module>
-        <module>client</module>
+        <module>client-socket</module>
+        <module>client-grpc</module>
     </modules>
 
     <properties>
@@ -33,6 +34,7 @@
         <mockito-core.version>3.5.13</mockito-core.version>
         <tomcat-embed-websocket.version>9.0.33</tomcat-embed-websocket.version>
         <log4j.version>2.7</log4j.version>
+        <grpc.version>1.32.1</grpc.version>
     </properties>
 
     <dependencies>
@@ -84,5 +86,35 @@
             <artifactId>log4j-slf4j-impl</artifactId>
             <version>${log4j.version}</version>
         </dependency>
+
+        <dependency>
+            <groupId>io.grpc</groupId>
+            <artifactId>grpc-protobuf</artifactId>
+            <version>${grpc.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.grpc</groupId>
+            <artifactId>grpc-stub</artifactId>
+            <version>${grpc.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.grpc</groupId>
+            <artifactId>grpc-netty-shaded</artifactId>
+            <version>${grpc.version}</version>
+            <scope>runtime</scope>
+        </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>${project.java.version}</source>
+                    <target>${project.java.version}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>

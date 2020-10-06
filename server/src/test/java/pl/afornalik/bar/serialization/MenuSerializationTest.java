@@ -22,13 +22,13 @@ public class MenuSerializationTest {
     private OutputStream outputStream;
 
     @Test
-    public void shouldWriteMenuToFile() throws FileNotFoundException {
+    public void shouldWriteMenuToFile() throws IOException {
         //given
         breakfastAvailableMenu = new BreakfastMenu(new TemporaryMealProvider()).showMenu();
         outputStream = new FileOutputStream(FILE_NAME);
         MenuSerialization menuSerialization = new MenuSerialization();
         //when
-        menuSerialization.serialize(breakfastAvailableMenu);
+        outputStream.write(menuSerialization.serialize(breakfastAvailableMenu));
         //then
         Assert.assertTrue(Files.exists(Paths.get(FILE_NAME)));
     }
