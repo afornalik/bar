@@ -16,10 +16,10 @@ public class SocketServerRunner {
 
         socketServerRunner.socketServer.start(54332);
         socketServerRunner.message.getClientMessage();
-     //   socketServerRunner.message.getClientMessage();
-       // socketServerRunner.message.getClientMessage();
-       // socketServerRunner.message.getClientMessage();
-       // socketServerRunner.message.getClientMessage();
+        // socketServerRunner.message.getClientMessage();
+        // socketServerRunner.message.getClientMessage();
+        // socketServerRunner.message.getClientMessage();
+        // socketServerRunner.message.getClientMessage();
 
         socketServerRunner.socketServer.stop();
 

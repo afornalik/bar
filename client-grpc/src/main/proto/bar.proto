@@ -1,0 +1,50 @@
+syntax = "proto3";
+
+//package model;
+
+option java_package = "pl.afornalik.bar.model" ;
+option java_multiple_files = true;
+//option java_outer_classname = "Meal";
+
+service Bar {
+  rpc order(Client) returns (Client);
+}
+
+message Meal {
+  int32 id = 1;
+  string name = 2;
+  float price = 3;
+  int32 prepare_time = 4 ;
+  bool deliverable = 5;
+
+  enum Type {
+    BREAKFAST = 0;
+    DINNER = 1;
+    DESSERT = 2;
+    SUPPER = 3;
+  }
+}
+
+message Menu {
+  int32 id = 1;
+  repeated Meal meals = 2;
+}
+
+message Client {
+  int32 id = 1;
+  repeated Meal meals = 2;
+  float bill = 3;
+
+  enum Satisfaction{
+    POOR = 0;
+    AVERAGE = 1;
+    GOOD = 2;
+    GREAT = 3;
+  }
+}
+
+message Waiter {
+  int32 id = 1;
+  string name = 2;
+  repeated Client clients = 3;
+}

@@ -9,11 +9,10 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>server</artifactId>
+    <groupId>pl.afornalik.bar</groupId>
+    <artifactId>client-grpc</artifactId>
 
     <properties>
-        <!--basic configuration-->
-        <project.java.version>11</project.java.version>
         <os-maven-plugin.version>1.4.1.Final</os-maven-plugin.version>
         <protobuf-maven-plugin.version>0.6.1</protobuf-maven-plugin.version>
     </properties>
@@ -47,4 +46,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>
