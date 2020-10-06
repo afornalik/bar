@@ -15,7 +15,7 @@ public class MealClient {
     private OrderMeals orderMeals;
 
     public MealClient(Channel channel) {
-        this.barBlockingStub = new BarGrpc.BarBlockingStub(channel);
+        this.barBlockingStub = BarGrpc.newBlockingStub(channel);
     }
 
     public void sendMeals() {
